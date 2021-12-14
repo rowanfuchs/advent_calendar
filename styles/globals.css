@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    @apply bg-blue-75;
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+canvas {
+    touch-action: none;
+}
+
+.max-w-n {
+    @apply max-w-none
+}
+
+.advent-wrapper {
+    @apply relative
+}
+
+.advent-open {
+    @apply relative z-0 m-0 m-auto;
+    width: 192px;
+    height: 192px;
+}
+
+.advent-closed {
+    @apply absolute z-10 top-0 left-0;
+    width: 192px;
+    height: 192px;
+
+    transform-origin: left;
+    transition: all 0.5s ease-in-out;
+}
+
+.open {
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+    filter: brightness(0%);
+}
